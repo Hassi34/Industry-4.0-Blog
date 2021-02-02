@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Post</title>
+{% endblock %}
+
+{% block body %}
+<h1 style="color:rgb(22, 18, 248);" align = 'center'> <b>Editing Post</b> </h1>
+    <hr>
+    <h2 style="color:rgb(22, 18, 248);" >Edit : </h2>
+    <form action = '/posts/edit/{{post.id}}' method ='POST'>
+        <label style="color:rgb(22, 18, 248);" for="title"><b>Title :</b></label>
+        <input class="form-control" type="text" name = 'title' id='title' value="{{post.title}}" aria-label="Enter Title"><br>
+        <label style="color:rgb(22, 18, 248);" for="author"><b>Author: </b></label> 
+        <input class="form-control" type="text" name = 'author' id='author' value="{{post.author}}" aria-label="Enter Author" aria-label="Enter Title"><br>
+        <label style="color:rgb(22, 18, 248);" for="content"><b>Post: </b></label> 
+        <textarea class="form-control" name = 'content' id="content" aria-label="Enter Content" rows="3">{{post.content}}</textarea><br>
+        <input class = 'btn btn-primary'  align = 'center' type='Submit' value='Save'>
+    </form>
+    <hr>
+{% endblock %}

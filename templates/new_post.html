@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Post</title>
+{% endblock %}
+
+{% block body %}
+<h1 style="color:rgb(22, 18, 248);"  align = 'center'><b>New Post</b></h1>
+    <hr>
+    <h2 style="color:rgb(22, 18, 248);">New Post : </h2>
+    <form action = '/posts' method ='POST'>
+        <label style="color:rgb(22, 18, 248);" for="title"><b>Title: </b></label>
+        <input class="form-control" type="text" name = 'title' id='title' placeholder="Enter Title" aria-label="Enter Title"><br>
+        <label style="color:rgb(22, 18, 248);" for="author"><b>Author: </b></label> 
+        <input class="form-control" type="text" name = 'author' id='author' placeholder="Enter Author" aria-label="Enter Author" aria-label="Enter Title"><br>
+        <label style="color:rgb(22, 18, 248);" for="content"><b>Post: </b></label> 
+        <textarea class="form-control" name = 'content' id="content" placeholder="Enter Content" aria-label="Enter Content" rows="3"></textarea><br>
+        <input class = "btn btn-primary" type='Submit' value='Post'>
+    </form>
+    <hr>
+{% endblock %}
